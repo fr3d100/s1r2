@@ -54,7 +54,11 @@ def play
 		nb_play += 1
 		puts "> Tu es sur la marche #{score}"
 	end
+	# On informe le joueur qu'il a gagné
+	puts "----------"
 	puts "Bravo, tu as gagné le jeu de loi !"
+	puts "----------"
+
 	return nb_play
 end
 
@@ -87,7 +91,7 @@ def average_finish_time(time)
 	puts "----------"
 	puts "Moyenne"
 	puts "----------"
-	puts "Il a donc fallut en moyenne #{average} coûts pour gagner !"
+	puts "Il a donc fallu en moyenne #{average} coûts pour gagner !"
 
 end
 
