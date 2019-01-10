@@ -1,7 +1,6 @@
 # méthode pour la fabrication de la demi pyramide
 def half_pyramid
-
-	#Demande à l'utilisateur
+	#Demande à l'utilisateur le nb d'étages désirés
 	puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
 	print ">" 
 	floors = gets.chomp.to_i
@@ -34,6 +33,7 @@ def half_pyramid
 			k += 1
 		end
 		f += 1
+		# On remets la variable des 'blanks' à 0
 		b = 0
 
 		# On affiche l'étage
@@ -79,6 +79,7 @@ def full_pyramid
 		end
 		#la différence avec la half pyramide est qu'on ajoute 2# de plus à entre chaque étage
 		f += 2
+		# On remets la variable des 'blanks' à 0
 		b = 0
 
 		# On affiche l'étage
@@ -95,12 +96,11 @@ def wtf_pyramid
 	print ">" 
 	floors = gets.chomp.to_i
 
-	if floors.odd?
-
+	if floors.odd? #on test si le nombre saisi est impair
 		puts "Voici ta WTF pyramide :"
 		#Définition des variables
 		p = Array.new(floors)
-		# variable pqui compte les étages
+		# variable qui compte les étages
 		i = 1
 		#varibable pour les dieses
 		f = 1
@@ -109,7 +109,7 @@ def wtf_pyramid
 
 		# 1) BOUCLE Partie supérieure
 		#Boucle des étages
-			while i - 1 < (floors+1)/2  do
+			while i - 1 < (floors+1)/2  do #la partie supérieur ne va que jusqu'à la moitié du nombre d'étages demandés
 
 				#Boucle pour les blancs
 				# Le nombre de blanc à gauche décrémente de 1 à chaque étage (d'où le -i)
@@ -135,14 +135,12 @@ def wtf_pyramid
 
 		#2) BOUCLE Partie inférieure
 		# On ne va pas recalculer des étage mais simplement faire réafficher les étage précédent dans l'ordre décroissant
-			
-			# On décrémente la dernière incrémentation parasite de i lors de la bourcle du dernier étage
+			# On annule la dernière incrémentation parasite de i lors de la boucle du dernier étage
 			i -= 1
 			while i-1 > 0  do
 				# On affiche l'étage symétrique
 				i-= 1
 				puts p[i]
-				
 			end
 
 	# Si le nombre demandé est pair
@@ -153,6 +151,6 @@ end
 
 
 
-# half_pyramid
+#half_pyramid
 #full_pyramid
 wtf_pyramid

@@ -49,7 +49,7 @@ end
 
 # La méthode perform qui enchaine les méthode de création de dp, d'authentification et d'affichage de la zone secrète
 def perform
-	password = signup
+	password = signup #On garde le mot de passe dans la variable "password"
 	login(password)
 	welcome_screen
 end
