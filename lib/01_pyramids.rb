@@ -149,8 +149,12 @@ def wtf_pyramid
 	end
 end
 
+# Définition de la méthode perfom
+def perform
+	#half_pyramid
+	#full_pyramid
+	wtf_pyramid
+end
 
-
-#half_pyramid
-#full_pyramid
-wtf_pyramid
+# Execution du perform
+perform
