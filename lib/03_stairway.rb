@@ -47,10 +47,15 @@ end
 
 def play
 	puts "Bienvenue dans cette nouvelles partie !"
-	score=0
+	score = 0
+	new_score = 0
 	nb_play = 0
 	while (score < 10)
-		score += game(die_roll)
+		new_score = game(die_roll)
+		# Gestion du cas pour ne pas descendre en dessous de la marche 0
+		if score + new_score > -1
+			score += new_score
+		end
 		nb_play += 1
 		puts "> Tu es sur la marche #{score}"
 	end
